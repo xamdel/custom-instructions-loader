@@ -1,6 +1,6 @@
 ### 1. Set up Project
 -[x] Initialize React with TypeScript project
--[] Set up Webpack for Chrome extension packaging
+-[x] Set up Webpack for Chrome extension packaging
 
 ### 2. Basic Functionality
 -[] Create new custom instructions w/titles, descriptions
