@@ -1,5 +1,6 @@
 import React from 'react';
 import { Instruction } from '../types';
+import InsertButton from './buttons/InsertButton';
 
 type Props = {
   instructions: Instruction[];
@@ -17,6 +18,7 @@ const InstructionList: React.FC<Props> = ({ instructions }) => {
             <p>{instruction.description.substring(0, 50)}...</p>
             <button>Edit</button>
             <button>Delete</button>
+            <InsertButton instructionOne={instruction.instructionOne} instructionTwo={instruction.instructionTwo} />
           </div>
         ))
       )}
