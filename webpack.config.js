@@ -1,11 +1,13 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
   entry: {
-    popup: "./src/popup/index.tsx",
-    contentScript: "./src/contentScript.ts",
-    background: "./src/background.ts",
+    popup: "./src/popup/Popup.tsx",
+    // contentScript: "./src/contentScript.ts",
+    // background: "./src/background.ts",
+    options: './src/options/OptionsPage.tsx'
   },
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -27,4 +29,11 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/options/options.html',
+      filename: 'options.html',
+      chunks: ['options'],
+    }),
+  ],
 };

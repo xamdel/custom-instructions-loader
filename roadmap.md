@@ -3,8 +3,8 @@
 -[x] Set up Webpack for Chrome extension packaging
 
 ### 2. Basic Functionality
--[] Create new custom instructions w/titles, descriptions
--[] Save new instructions to storage
+-[x] Create new custom instructions w/titles, descriptions
+-[x] Save new instructions to storage
 -[] Load saved instructions from storage
 -[] Display loaded CIs in a list
 -[] Add the ability to edit and delete saved instructions from the Popup UI

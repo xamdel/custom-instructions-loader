@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { Instruction } from '../types';
@@ -41,10 +41,10 @@ const NewInstruction = () => {
             <label htmlFor="description">Description:</label>
             <input id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
 
-            <label htmlFor="instructionOne">Instruction One:</label>
+            <label htmlFor="instructionOne">1. What would you like ChatGPT to know about you to provide better responses?</label>
             <textarea id="instructionOne" value={instructionOne} onChange={(e) => setInstructionOne(e.target.value)} />
 
-            <label htmlFor="instructionTwo">Instruction Two:</label>
+            <label htmlFor="instructionTwo">2. How would you like ChatGPT to respond?</label>
             <textarea id="instructionTwo" value={instructionTwo} onChange={(e) => setInstructionTwo(e.target.value)} />
 
             <button onClick={handleSave}>Save</button>
