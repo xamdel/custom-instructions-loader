@@ -6,11 +6,13 @@ import NewInstruction from './popup/NewInstruction';
 
 function App() {
   return (
+    <>
+    <Popup />
     <Routes>
       <Route path="/" element={<Popup />} />
       <Route path="/NewInstruction" element={<NewInstruction />} />
     </Routes>
-
+    </>
   );
 }
 

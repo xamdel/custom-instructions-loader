@@ -11,6 +11,7 @@ root.render(
   <React.StrictMode>
     <BrowserRouter>
       <App/>
+      {/* <p>Hello, world!</p> */}
     </BrowserRouter>
   </React.StrictMode>
 );

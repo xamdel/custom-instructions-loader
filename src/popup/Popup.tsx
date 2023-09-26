@@ -14,6 +14,7 @@ const Popup = () => {
 
     return (
         <div>
+            <p>Hello, world!</p>
             <Link to="/NewInstruction">New</Link>
             <InstructionsList instructions={instructions} />
         </div>

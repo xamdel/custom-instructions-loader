@@ -4,9 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   mode: process.env.NODE_ENV || 'development',
   entry: {
-    popup: "./src/popup/Popup.tsx",
-    // contentScript: "./src/contentScript.ts",
-    // background: "./src/background.ts",
+    popup: "./src/index.tsx",
+    contentScript: "./src/contentScript/contentScript.ts",
+    background: "./src/backgroundScript/backgroundScript.ts",
     options: './src/options/OptionsPage.tsx'
   },
   output: {
@@ -30,6 +30,11 @@ module.exports = {
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: './src/popup/popup.html',
+      filename: 'popup.html',
+      chunks: ['popup'],
+    }),
     new HtmlWebpackPlugin({
       template: './src/options/options.html',
       filename: 'options.html',
