@@ -13,7 +13,10 @@
 -[x] Implement script to insert instructions into ChatGPT's textareas
 
 ### 4. Background Script
--[] Implement basic background script for extension lifecycle
+-[x] Implement basic background script for extension lifecycle
+
+### Misc
+-[] Display error in popup when text areas not found (modal not open)
 
 ### 5. UI
 -[] Make it look good
@@ -28,5 +31,6 @@
 ### Future Features
 -[] Make a webpage for sharing CIs, browsing CIs shared by others
     -[] Upvote functionality, trending etc
+-[] Enhance UX - prevent the user from needing to click through site menus
 
 ### Bugs/Issues
