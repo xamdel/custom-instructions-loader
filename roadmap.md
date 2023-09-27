@@ -7,7 +7,9 @@
 -[x] Save new instructions to storage
 -[x] Load saved instructions from storage
 -[x] Display loaded CIs in a list
--[] Add the ability to edit and delete saved instructions from the Popup UI
+-[x] Delete saved instructions from the Popup UI
+-[] Edit instructions
+-[] Page for viewing details of single set of instructions
 
 ### 3. Content Script
 -[x] Implement script to insert instructions into ChatGPT's textareas
@@ -16,7 +18,7 @@
 -[x] Implement basic background script for extension lifecycle
 
 ### Misc
--[] Display error in popup when text areas not found (modal not open)
+-[x] Display error in popup when text areas not found (modal not open)
 
 ### 5. UI
 -[] Make it look good
@@ -34,3 +36,5 @@
 -[] Enhance UX - prevent the user from needing to click through site menus
 
 ### Bugs/Issues
+-[] Existing list items get duplicated after creating a new item
+-[] Sometimes inserting doesn't work until refreshing chatGPT page
