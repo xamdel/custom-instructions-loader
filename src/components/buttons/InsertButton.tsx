@@ -6,7 +6,7 @@ interface InsertButtonProps {
 }
 
 const InsertButton: React.FC<InsertButtonProps> = ({ instructionOne, instructionTwo }) => {
-  const insertInstructions = () => {
+  function insertInstructions() {
     const message = {
       type: "INSERT_INSTRUCTIONS",
       instructionOne,
