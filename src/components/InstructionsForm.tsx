@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { Instruction } from '../types';
+import useInstructions from '../hooks/useInstructions';
 
 const InstructionForm = () => {
   const [title, setTitle] = useState('');
@@ -10,8 +11,10 @@ const InstructionForm = () => {
   const [instructionTwo, setInstructionTwo] = useState('');
 
   const navigate = useNavigate();
-
   const location = useLocation();
+
+  const { addInstruction, updateInstruction } = useInstructions();
+
   const mode = location.state?.mode || 'create';
   const existingInstruction = location.state?.instruction || null;
 
@@ -33,20 +36,13 @@ const InstructionForm = () => {
       instructionTwo,
     };
 
-    const existingInstructions: Instruction[] = JSON.parse(localStorage.getItem('instructions') || '[]');
-
     if (mode === 'create') {
-      existingInstructions.push(newInstruction);
+      addInstruction(newInstruction);
     } else {
-      const index = existingInstructions.findIndex((inst) => inst.id === newInstruction.id);
-      if (index !== -1) {
-        existingInstructions[index] = newInstruction;
-      }
+      updateInstruction(newInstruction);
     }
 
-    localStorage.setItem('instructions', JSON.stringify(existingInstructions));
-
-    navigate("/");
+    navigate('/');
   };
 
   const handleCancel = () => {
@@ -55,7 +51,7 @@ const InstructionForm = () => {
       setDescription('');
       setInstructionOne('');
       setInstructionTwo('');
-      navigate("/");
+      navigate('/');
     }
   };
 
