@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import { BrowserRouter } from 'react-router-dom';
+import { MemoryRouter as Router } from 'react-router-dom';
 import App from './App';
 
 const root = ReactDOM.createRoot(
@@ -9,9 +9,8 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <Router>
       <App/>
-      {/* <p>Hello, world!</p> */}
-    </BrowserRouter>
+    </Router>
   </React.StrictMode>
 );

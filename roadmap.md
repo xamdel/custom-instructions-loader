@@ -8,9 +8,9 @@
 -[x] Load saved instructions from storage
 -[x] Display loaded CIs in a list
 -[x] Delete saved instructions from the Popup UI
--[] Edit instructions
+-[x] Edit instructions
     -[x] Create dynamic form component for create&edit
-    -[] Create EditButton component for passing state to form component
+    -[x] Create EditButton component for passing state to form component
 -[] Page for viewing details of single set of instructions
 
 ### 3. Content Script
@@ -33,10 +33,11 @@
 -[] Publish the extension to the Chrome Web Store
 
 ### Future Features
+-[] Replace window.confirms with in-app modals
 -[] Make a webpage for sharing CIs, browsing CIs shared by others
     -[] Upvote functionality, trending etc
 -[] Enhance UX - prevent the user from needing to click through site menus
 
 ### Bugs/Issues
--[] Existing list items get duplicated after creating a new item
+-[x] Existing list items get duplicated after creating a new item
 -[] Sometimes inserting doesn't work until refreshing chatGPT page

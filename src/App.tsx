@@ -6,14 +6,11 @@ import InstructionForm from './components/InstructionsForm';
 
 function App() {
   return (
-    <>
-    <Popup />
     <Routes>
       <Route path="/" element={<Popup />} />
       <Route path="/instructions/new" element={<InstructionForm />} />
       <Route path="/instructions/edit/:id" element={<InstructionForm />} />
     </Routes>
-    </>
   );
 }
 
