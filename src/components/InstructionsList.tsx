@@ -1,15 +1,22 @@
-import React from 'react';
-import { Instruction } from '../types';
+import React, { useEffect } from 'react';
 import InsertButton from './buttons/InsertButton';
-import DeleteButton from './buttons/DeleteButton';
 import EditButton from './buttons/EditButton';
 import { Link } from 'react-router-dom';
+import useInstructions from '../hooks/useInstructions';
 
-type Props = {
-  instructions: Instruction[];
-};
+const InstructionsList = () => {
+  const { instructions, deleteInstruction } = useInstructions();
 
-const InstructionList: React.FC<Props> = ({ instructions }) => {
+  useEffect(() => {
+    console.log("InstructionsList re-rendered.", instructions);
+  }, [instructions]);  
+
+  const handleDelete = (id: string) => {
+    if (window.confirm("Are you sure you want to delete this instruction?")) {
+      deleteInstruction(id);
+    }
+  };
+
   return (
     <div>
       {instructions.length === 0 ? (
@@ -22,7 +29,7 @@ const InstructionList: React.FC<Props> = ({ instructions }) => {
               <p>{instruction.description.substring(0, 50)}...</p>
             </Link>
             <EditButton instruction={instruction} />
-            <DeleteButton instructionId={instruction.id} />
+            <button onClick={() => handleDelete(instruction.id)}>Delete</button>
             <InsertButton instructionOne={instruction.instructionOne} instructionTwo={instruction.instructionTwo} />
           </div>
         ))
@@ -31,4 +38,4 @@ const InstructionList: React.FC<Props> = ({ instructions }) => {
   );
 };
 
-export default InstructionList;
+export default InstructionsList;

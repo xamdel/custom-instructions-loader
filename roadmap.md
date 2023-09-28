@@ -12,7 +12,7 @@
     -[x] Create dynamic form component for create&edit
     -[x] Create EditButton component for passing state to form component
 -[x] Page for viewing details of single set of instructions
--[] Back button component
+-[x] Back button component
 
 ### 3. Content Script
 -[x] Implement script to insert instructions into ChatGPT's textareas
@@ -35,6 +35,7 @@
 
 ### Future Features
 -[] Replace window.confirms with in-app modals
+-[] Button for saving instructions from page into extension
 -[] Make a webpage for sharing CIs, browsing CIs shared by others
     -[] Upvote functionality, trending etc
 -[] Enhance UX - prevent the user from needing to click through site menus

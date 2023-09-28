@@ -4,11 +4,12 @@ import InstructionsList from '../components/InstructionsList';
 import useInstructions from '../hooks/useInstructions';
 
 const Popup = () => {
-    const { instructions } = useInstructions();
+  const { instructions } = useInstructions();
+
     return (
       <div>
         <Link to="/instructions/new">New</Link>
-        <InstructionsList instructions={instructions} />
+        <InstructionsList key={instructions.length}/>
       </div>
     );
   };
