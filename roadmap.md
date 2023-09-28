@@ -11,7 +11,8 @@
 -[x] Edit instructions
     -[x] Create dynamic form component for create&edit
     -[x] Create EditButton component for passing state to form component
--[] Page for viewing details of single set of instructions
+-[x] Page for viewing details of single set of instructions
+-[] Back button component
 
 ### 3. Content Script
 -[x] Implement script to insert instructions into ChatGPT's textareas
