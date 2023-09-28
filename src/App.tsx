@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import Popup from './popup/Popup';
-import NewInstruction from './popup/NewInstruction';
+import InstructionForm from './components/InstructionsForm';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
     <Popup />
     <Routes>
       <Route path="/" element={<Popup />} />
-      <Route path="/NewInstruction" element={<NewInstruction />} />
+      <Route path="/instructions/new" element={<InstructionForm mode='create' existingInstruction={null} />} />
     </Routes>
     </>
   );

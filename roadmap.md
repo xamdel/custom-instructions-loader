@@ -9,6 +9,8 @@
 -[x] Display loaded CIs in a list
 -[x] Delete saved instructions from the Popup UI
 -[] Edit instructions
+    -[x] Create dynamic form component for create&edit
+    -[] Create EditButton component for passing state to form component
 -[] Page for viewing details of single set of instructions
 
 ### 3. Content Script
