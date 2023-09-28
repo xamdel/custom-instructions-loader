@@ -1,14 +1,21 @@
 import React from 'react';
+import useInstructions  from '../../hooks/useInstructions';
 
 interface DeleteButtonProps {
   instructionId: string;
-  onDelete: (id: string) => void;
 }
 
-const DeleteButton: React.FC<DeleteButtonProps> = ({ instructionId, onDelete }) => {
+const DeleteButton: React.FC<DeleteButtonProps> = ({ instructionId }) => {
+  const { deleteInstruction } = useInstructions();
+
+  const handleDelete = () => {
+    if (window.confirm("Are you sure you want to delete this instruction?")) {
+      deleteInstruction(instructionId);
+    }
+  };
 
   return (
-    <button onClick={() => onDelete(instructionId)}>Delete</button>
+    <button onClick={handleDelete}>Delete</button>
   );
 };
 

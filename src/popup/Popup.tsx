@@ -4,11 +4,11 @@ import InstructionsList from '../components/InstructionsList';
 import useInstructions from '../hooks/useInstructions';
 
 const Popup = () => {
-    const { instructions, deleteInstruction } = useInstructions();
+    const { instructions } = useInstructions();
     return (
       <div>
         <Link to="/instructions/new">New</Link>
-        <InstructionsList instructions={instructions} deleteInstructions={deleteInstruction} />
+        <InstructionsList instructions={instructions} />
       </div>
     );
   };
