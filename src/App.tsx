@@ -10,7 +10,8 @@ function App() {
     <Popup />
     <Routes>
       <Route path="/" element={<Popup />} />
-      <Route path="/instructions/new" element={<InstructionForm mode='create' existingInstruction={null} />} />
+      <Route path="/instructions/new" element={<InstructionForm />} />
+      <Route path="/instructions/edit/:id" element={<InstructionForm />} />
     </Routes>
     </>
   );

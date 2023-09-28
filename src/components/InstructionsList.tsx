@@ -2,6 +2,7 @@ import React from 'react';
 import { Instruction } from '../types';
 import InsertButton from './buttons/InsertButton';
 import DeleteButton from './buttons/DeleteButton';
+import EditButton from './buttons/EditButton';
 
 type Props = {
   instructions: Instruction[];
@@ -18,7 +19,7 @@ const InstructionList: React.FC<Props> = ({ instructions, deleteInstructions }) 
           <div key={instruction.id}>
             <h3>{instruction.title}</h3>
             <p>{instruction.description.substring(0, 50)}...</p>
-            <button>Edit</button>
+            <EditButton instruction={instruction} />
             <DeleteButton instructionId={instruction.id} onDelete={deleteInstructions} />
             <InsertButton instructionOne={instruction.instructionOne} instructionTwo={instruction.instructionTwo} />
           </div>

@@ -1,20 +1,19 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { Instruction } from '../types';
 
-interface InstructionFormProps {
-  mode: 'create' | 'edit';
-  existingInstruction: Instruction | null;
-}
-
-const InstructionForm: React.FC<InstructionFormProps> = ({ mode, existingInstruction }) => {
+const InstructionForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [instructionOne, setInstructionOne] = useState('');
   const [instructionTwo, setInstructionTwo] = useState('');
 
   const navigate = useNavigate();
+
+  const location = useLocation();
+  const mode = location.state?.mode || 'create';
+  const existingInstruction = location.state?.instruction || null;
 
   useEffect(() => {
     if (mode === 'edit' && existingInstruction) {
