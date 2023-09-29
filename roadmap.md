@@ -14,6 +14,7 @@
 -[x] Page for viewing details of single set of instructions
 -[x] Back button component
 -[] Insert button on InstructionView page
+-[] Basic instructions for how to use the extension
 
 ### 3. Content Script
 -[x] Implement script to insert instructions into ChatGPT's textareas
@@ -30,9 +31,10 @@
     -[x] Wrapper div
     -[x] Container
     -[x] New button
+        -[] make new button sticky
     -[x] Links
-    -[] Scrollbar
-    -[] Font
+    -[x] Scrollbar
+    -[x] Font
     -[] InstructionsList
         -[] Title & Description
         -[] Top border
@@ -55,6 +57,7 @@
 -[] Favorites
     -[] mini-nav: all | favorites | recent
 -[] rearrangeable list
+-[] tags
 -[] expand/collapse?
 
 ### Bugs/Issues
