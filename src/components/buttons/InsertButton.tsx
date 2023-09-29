@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { BsBoxArrowInDownLeft } from 'react-icons/bs'
 
 interface InsertButtonProps {
   instructionOne: string;
@@ -25,8 +26,8 @@ const InsertButton: React.FC<InsertButtonProps> = ({ instructionOne, instruction
 
   return (
     <div>
-      <button onClick={insertInstructions}>
-        Insert Instructions
+      <button className='insert-button' onClick={insertInstructions} title='Insert Instructions'>
+        <BsBoxArrowInDownLeft />
       </button>
       {errorMessage && <span style={{ color: "red" }}>{errorMessage}</span>}
     </div>

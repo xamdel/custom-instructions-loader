@@ -3,8 +3,9 @@
     flex-direction: column;
     height: 500px;
     width: 400px;
-    background-color: #E8E8E8;
-    padding: 16px;
+    background-color: #f7f7f7;
+    padding: 12px;
+    padding-right: 0;
     box-sizing: border-box;
 }
 
@@ -16,16 +17,16 @@
 .container {
     flex-grow: 1;
     background-color: #f7f7f7;
-    padding: 16px;
+    padding-inline: 16px;
     height: 100%;
-    border-radius: 12px;
+    border-radius: 8px;
     overflow-y: auto;
 }
 
 .new-button {
     padding: 6px 12px;
     color: #000;
-    background-color: #fff;
+    background-color: #f7f7f7;
     border: 1px solid black;
     border-radius: 6px;
     transition: all 0.3s ease 0s;
@@ -38,6 +39,48 @@
     color: #fff;
   }
 
+.instruction-entry {
+    padding-block: 1rem;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+.instruction-entry h3 {
+    font-size: 16px;
+    margin-block: 0.7rem;
+}
+
+.instruction-entry p {
+    font-size: 14px;
+    margin-block: 0.7rem;
+}
+
+.buttons-container {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.insert-button, .edit-button, .delete-button, .back-button {
+    background: none;
+    border: none;
+    font-size: large;
+    cursor: pointer;
+}
+
+.back-button {
+    font-size: xx-large;
+    padding: 0;
+}
+
+.sticky-buttons-container {
+    position: sticky;
+    top: 0;
+    background: #f7f7f7;
+}
+
+.instruction-view p {
+    font-size: 14px;
+    line-height: 1.6;
+}
 
 /*SCROLLBAR STYLES*/
 .container::-webkit-scrollbar {

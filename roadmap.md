@@ -35,10 +35,15 @@
     -[x] Links
     -[x] Scrollbar
     -[x] Font
-    -[] InstructionsList
-        -[] Title & Description
-        -[] Top border
-        -[] Insert, edit, delete buttons
+    -[x] InstructionsList
+        -[x] Title & Description
+        -[x] border
+        -[x] Insert, edit, delete buttons
+    -[] InstructionView
+        -[x] Add insert button
+        -[x] Position buttons on top
+        -[x] Make buttons fixed/sticky
+        -[] Larger font
 
 ### 6. Extension Options Page
 -[x] Create an options/settings page for the extension if needed

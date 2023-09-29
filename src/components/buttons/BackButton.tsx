@@ -1,4 +1,5 @@
 import React from "react";
+import { BsArrowLeftShort } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 
 const BackButton = () => {
@@ -6,7 +7,11 @@ const BackButton = () => {
 
     const goBack = () => navigate('/');
 
-    return <button onClick={goBack}>Back</button>
+    return (
+        <button className="back-button" onClick={goBack} title="Back">
+            <BsArrowLeftShort />
+        </button>
+    );
 }
 
 export default BackButton;

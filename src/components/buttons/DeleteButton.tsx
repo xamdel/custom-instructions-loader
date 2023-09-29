@@ -1,6 +1,7 @@
 import React from 'react';
 import useInstructions  from '../../hooks/useInstructions';
 import { useNavigate } from 'react-router-dom';
+import { BsTrash3 } from 'react-icons/bs';
 
 interface DeleteButtonProps {
   instructionId: string;
@@ -18,7 +19,9 @@ const DeleteButton: React.FC<DeleteButtonProps> = ({ instructionId }) => {
   };
 
   return (
-    <button onClick={handleDelete}>Delete</button>
+    <button className='delete-button' onClick={handleDelete} title='Delete'>
+      <BsTrash3 />
+    </button>
   );
 };
 
