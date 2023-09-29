@@ -39,6 +39,9 @@
 -[] Make a webpage for sharing CIs, browsing CIs shared by others
     -[] Upvote functionality, trending etc
 -[] Enhance UX - prevent the user from needing to click through site menus
+-[] Dark/light mode
+-[] Favorites
+-[] rearrangeable list
 
 ### Bugs/Issues
 -[x] Existing list items get duplicated after creating a new item
