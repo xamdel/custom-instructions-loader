@@ -91,7 +91,7 @@ const InstructionForm = () => {
       </div>
       {showModal && (
         <ConfirmationModal
-          message="Are you sure you want to cancel? Changes won't be saved"
+          message="Are you sure you want to cancel? Changes won't be saved."
           onConfirm={confirmCancel}
           onCancel={cancelCancel}
         />

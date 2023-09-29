@@ -15,7 +15,7 @@
 -[x] Back button component
 -[x] Insert button on InstructionView page
 -[] Basic instructions for how to use the extension
--[] Replace window.confirms with in-app modals
+-[x] Replace window.confirms with in-app modals
 
 ### 3. Content Script
 -[x] Implement script to insert instructions into ChatGPT's textareas

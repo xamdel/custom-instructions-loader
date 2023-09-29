@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { Instruction } from '../types';
 import EditButton from './buttons/EditButton';
 import BackButton from './buttons/BackButton';
@@ -13,6 +13,7 @@ const InstructionView: React.FC = () => {
 
     const { deleteInstruction } = useInstructions();
 
+    const navigate = useNavigate();
     const location = useLocation();
     const instruction: Instruction = location.state;
 
@@ -27,6 +28,7 @@ const InstructionView: React.FC = () => {
     const confirmDelete = () => {
         deleteInstruction(instruction.id);
         setShowModal(false);
+        navigate('/');
     }
 
     if (!instruction) {
