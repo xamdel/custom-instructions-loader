@@ -1,11 +1,15 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import InsertButton from './buttons/InsertButton';
 import EditButton from './buttons/EditButton';
 import { Link } from 'react-router-dom';
 import useInstructions from '../hooks/useInstructions';
 import { BsTrash3 } from 'react-icons/bs';
+import ConfirmationModal from './ConfirmationModal';
 
 const InstructionsList = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [currentInstructionId, setCurrentInstructionId] = useState('');
+
   const { instructions, deleteInstruction } = useInstructions();
 
   useEffect(() => {
@@ -13,10 +17,18 @@ const InstructionsList = () => {
   }, [instructions]);
 
   const handleDelete = (id: string) => {
-    if (window.confirm("Are you sure you want to delete this instruction?")) {
-      deleteInstruction(id);
-    }
+    setCurrentInstructionId(id);
+    setShowModal(true);
   };
+
+  const cancelDelete = () => {
+    setShowModal(false);
+  }
+
+  const confirmDelete = () => {
+    deleteInstruction(currentInstructionId);
+    setShowModal(false);
+  }
 
   return (
     <div>
@@ -36,6 +48,13 @@ const InstructionsList = () => {
             </div>
           </div>
         ))
+      )}
+      {showModal && (
+        <ConfirmationModal
+          message="Are you sure you want to delete this instruction? Unless saved elsewhere, data will not be recoverable."
+          onConfirm={confirmDelete}
+          onCancel={cancelDelete}
+        />
       )}
     </div>
   );

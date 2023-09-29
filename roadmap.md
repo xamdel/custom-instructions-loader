@@ -51,6 +51,7 @@
         -[x] Page layout
         -[x] Input/textarea styling
         -[x] Save & Cancel buttons
+    -[] Confirmation Modal
 
 ### 6. Extension Options Page
 -[x] Create an options/settings page for the extension if needed

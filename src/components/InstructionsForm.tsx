@@ -3,12 +3,14 @@ import { useLocation, useNavigate } from 'react-router-dom';
 import { v4 as uuid } from 'uuid';
 import { Instruction } from '../types';
 import useInstructions from '../hooks/useInstructions';
+import ConfirmationModal from './ConfirmationModal';
 
 const InstructionForm = () => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [instructionOne, setInstructionOne] = useState('');
   const [instructionTwo, setInstructionTwo] = useState('');
+  const [showModal, setShowModal] = useState(false);
 
   const navigate = useNavigate();
   const location = useLocation();
@@ -46,13 +48,19 @@ const InstructionForm = () => {
   };
 
   const handleCancel = () => {
-    if (window.confirm("Are you sure you want to cancel? Changes will not be saved.")) {
-      setTitle('');
-      setDescription('');
-      setInstructionOne('');
-      setInstructionTwo('');
-      navigate('/');
-    }
+    setShowModal(true);
+  }
+
+  const cancelCancel = () => {
+    setShowModal(false);
+  }
+
+  const confirmCancel = () => {
+    setTitle('');
+    setDescription('');
+    setInstructionOne('');
+    setInstructionTwo('');
+    navigate('/');
   };
 
   return (
@@ -81,6 +89,13 @@ const InstructionForm = () => {
         <button className="form-button save-button" onClick={handleSave}>Save</button>
         <button className="form-button cancel-button" onClick={handleCancel}>Cancel</button>
       </div>
+      {showModal && (
+        <ConfirmationModal
+          message="Are you sure you want to cancel? Changes won't be saved"
+          onConfirm={confirmCancel}
+          onCancel={cancelCancel}
+        />
+      )}
     </div>
   );
 };

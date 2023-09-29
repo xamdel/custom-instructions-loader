@@ -1,14 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Instruction } from '../types';
 import EditButton from './buttons/EditButton';
-import DeleteButton from './buttons/DeleteButton';
 import BackButton from './buttons/BackButton';
 import InsertButton from './buttons/InsertButton';
+import ConfirmationModal from './ConfirmationModal';
+import useInstructions from '../hooks/useInstructions';
+import { BsTrash3 } from 'react-icons/bs';
 
 const InstructionView: React.FC = () => {
+    const [showModal, setShowModal] = useState(false);
+
+    const { deleteInstruction } = useInstructions();
+
     const location = useLocation();
     const instruction: Instruction = location.state;
+
+    const handleDelete = () => {
+        setShowModal(true);
+    }
+
+    const cancelDelete = () => {
+        setShowModal(false);
+    }
+
+    const confirmDelete = () => {
+        deleteInstruction(instruction.id);
+        setShowModal(false);
+    }
 
     if (!instruction) {
         return (
@@ -28,7 +47,7 @@ const InstructionView: React.FC = () => {
                 <div className="buttons-container">
                     <InsertButton instructionOne={instruction.instructionOne} instructionTwo={instruction.instructionTwo} />
                     <EditButton instruction={instruction} />
-                    <DeleteButton instructionId={instruction.id} />
+                    <button className='delete-button' onClick={() => handleDelete()} title='Delete'><BsTrash3 /></button>
                 </div>
             </div>
             <div className='instruction-view'>
@@ -39,6 +58,13 @@ const InstructionView: React.FC = () => {
                 <h3>2. How would you like ChatGPT to respond?</h3>
                 <p>{instruction.instructionTwo}</p>
             </div>
+            {showModal && (
+                <ConfirmationModal
+                    message="Are you sure you want to delete this instruction? Unless saved elsewhere, data will not be recoverable."
+                    onConfirm={confirmDelete}
+                    onCancel={cancelDelete}
+                />
+            )}
         </>
     );
 };
