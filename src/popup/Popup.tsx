@@ -8,7 +8,9 @@ const Popup = () => {
 
     return (
       <div>
-        <Link to="/instructions/new">New</Link>
+        <Link to="/instructions/new">
+          <button className='new-button'>New</button>
+        </Link>
         <InstructionsList key={instructions.length}/>
       </div>
     );

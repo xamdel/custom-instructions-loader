@@ -16,7 +16,24 @@
 .container {
     flex-grow: 1;
     background-color: #f7f7f7;
-    padding: 8px;
+    padding: 16px;
     height: 100%;
     border-radius: 12px;
+    overflow-y: scroll;
 }
+
+.new-button {
+    padding: 6px 12px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 6px;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .new-button:hover {
+    background-color: #23c483;
+    color: #fff;
+  }

@@ -13,6 +13,7 @@
     -[x] Create EditButton component for passing state to form component
 -[x] Page for viewing details of single set of instructions
 -[x] Back button component
+-[] Insert button on InstructionView page
 
 ### 3. Content Script
 -[x] Implement script to insert instructions into ChatGPT's textareas
@@ -25,6 +26,17 @@
 
 ### 5. UI
 -[] Make it look good
+    -[x] Header
+    -[x] Wrapper div
+    -[x] Container
+    -[x] New button
+    -[x] Links
+    -[] Scrollbar
+    -[] Font
+    -[] InstructionsList
+        -[] Title & Description
+        -[] Top border
+        -[] Insert, edit, delete buttons
 
 ### 6. Extension Options Page
 -[x] Create an options/settings page for the extension if needed
@@ -41,7 +53,9 @@
 -[] Enhance UX - prevent the user from needing to click through site menus
 -[] Dark/light mode
 -[] Favorites
+    -[] mini-nav: all | favorites | recent
 -[] rearrangeable list
+-[] expand/collapse?
 
 ### Bugs/Issues
 -[x] Existing list items get duplicated after creating a new item
