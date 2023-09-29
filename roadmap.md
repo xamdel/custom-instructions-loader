@@ -13,8 +13,9 @@
     -[x] Create EditButton component for passing state to form component
 -[x] Page for viewing details of single set of instructions
 -[x] Back button component
--[] Insert button on InstructionView page
+-[x] Insert button on InstructionView page
 -[] Basic instructions for how to use the extension
+-[] Replace window.confirms with in-app modals
 
 ### 3. Content Script
 -[x] Implement script to insert instructions into ChatGPT's textareas
@@ -39,11 +40,17 @@
         -[x] Title & Description
         -[x] border
         -[x] Insert, edit, delete buttons
-    -[] InstructionView
+    -[x] InstructionView
         -[x] Add insert button
         -[x] Position buttons on top
         -[x] Make buttons fixed/sticky
-        -[] Larger font
+        -[x] Larger font
+        -[x] Line spacing
+    -[x] InstructionsForm
+        -[x] Labels above
+        -[x] Page layout
+        -[x] Input/textarea styling
+        -[x] Save & Cancel buttons
 
 ### 6. Extension Options Page
 -[x] Create an options/settings page for the extension if needed
@@ -53,17 +60,17 @@
 -[] Publish the extension to the Chrome Web Store
 
 ### Future Features
--[] Replace window.confirms with in-app modals
 -[] Button for saving instructions from page into extension
 -[] Make a webpage for sharing CIs, browsing CIs shared by others
     -[] Upvote functionality, trending etc
 -[] Enhance UX - prevent the user from needing to click through site menus
 -[] Dark/light mode
 -[] Favorites
-    -[] mini-nav: all | favorites | recent
+    -[] mini-nav: all | favorites | recent | tags
 -[] rearrangeable list
 -[] tags
 -[] expand/collapse?
+-[] character count in textareas
 
 ### Bugs/Issues
 -[x] Existing list items get duplicated after creating a new item

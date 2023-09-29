@@ -1,103 +1,152 @@
 .outer-wrapper {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-    width: 400px;
-    background-color: #f7f7f7;
-    padding: 12px;
-    padding-right: 0;
-    box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 400px;
+  background-color: #f7f7f7;
+  padding: 12px;
+  padding-right: 0;
+  box-sizing: border-box;
 }
 
 .header h2 {
-    margin-top: 0;
-    margin-bottom: 12px;
+  margin-top: 0;
+  margin-bottom: 12px;
 }
 
 .container {
-    flex-grow: 1;
-    background-color: #f7f7f7;
-    padding-inline: 16px;
-    height: 100%;
-    border-radius: 8px;
-    overflow-y: auto;
+  flex-grow: 1;
+  background-color: #f7f7f7;
+  padding-inline: 16px;
+  height: 100%;
+  border-radius: 8px;
+  overflow-y: auto;
 }
 
 .new-button {
-    padding: 6px 12px;
-    color: #000;
-    background-color: #f7f7f7;
-    border: 1px solid black;
-    border-radius: 6px;
-    transition: all 0.3s ease 0s;
-    cursor: pointer;
-    outline: none;
-  }
-  
-  .new-button:hover {
-    background-color: #23c483;
-    color: #fff;
-  }
+  padding: 6px 12px;
+  color: #000;
+  background-color: #f7f7f7;
+  border: 1px solid black;
+  border-radius: 4px;
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+.new-button:hover {
+  background-color: #23c483;
+  color: #fff;
+}
 
 .instruction-entry {
-    padding-block: 1rem;
-    border-bottom: 1px solid #c5c5c5;
+  padding-block: 1rem;
+  border-bottom: 1px solid #c5c5c5;
 }
 
 .instruction-entry h3 {
-    font-size: 16px;
-    margin-block: 0.7rem;
+  font-size: 16px;
+  margin-block: 0.7rem;
 }
 
 .instruction-entry p {
-    font-size: 14px;
-    margin-block: 0.7rem;
+  font-size: 14px;
+  margin-block: 0.7rem;
 }
 
 .buttons-container {
-    display: flex;
-    gap: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
 }
 
-.insert-button, .edit-button, .delete-button, .back-button {
-    background: none;
-    border: none;
-    font-size: large;
-    cursor: pointer;
+.insert-button,
+.edit-button,
+.delete-button,
+.back-button {
+  background: none;
+  border: none;
+  font-size: large;
+  cursor: pointer;
 }
 
 .back-button {
-    font-size: xx-large;
-    padding: 0;
+  font-size: xx-large;
+  padding: 0;
 }
 
 .sticky-buttons-container {
-    position: sticky;
-    top: 0;
-    background: #f7f7f7;
+  position: sticky;
+  top: 0;
+  background: #f7f7f7;
 }
 
 .instruction-view p {
-    font-size: 14px;
-    line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* FORM STYLES */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-right: 16px;
+}
+
+.form-container label {
+  font-size: 1.2em;
+}
+
+.input-group {
+  margin-bottom: 16px;
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-textarea {
+  resize: vertical;
+}
+
+.button-group {
+  display: flex;
+  gap: 16px;
+}
+
+.form-button {
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.save-button:hover,
+.cancel-button:hover {
+  background-color: #f2f2f2;
 }
 
 /*SCROLLBAR STYLES*/
 .container::-webkit-scrollbar {
-    width: 8px;
-  }
-  
-  .container::-webkit-scrollbar-thumb {
-    background-color: #c5c5c5;
-    border-radius: 12px;
-  }
-  
-  .container::-webkit-scrollbar-button {
-    display: none; 
-  }
-  
-  
-  .container {
-    scrollbar-width: thin;
-    scrollbar-color: #c5c5c5 #f1f1f1;
-  }
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-thumb {
+  background-color: #c5c5c5;
+  border-radius: 12px;
+}
+
+.container::-webkit-scrollbar-button {
+  display: none;
+}
+
+.container {
+  scrollbar-width: thin;
+  scrollbar-color: #c5c5c5 #f1f1f1;
+}

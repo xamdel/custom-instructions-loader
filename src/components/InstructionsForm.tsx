@@ -56,21 +56,31 @@ const InstructionForm = () => {
   };
 
   return (
-    <div>
-      <label htmlFor="title">Title:</label>
-      <input id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+    <div className="form-container">
+      <div className="input-group">
+        <label htmlFor="title">Title:</label>
+        <input className="form-input" id="title" value={title} onChange={(e) => setTitle(e.target.value)} />
+      </div>
 
-      <label htmlFor="description">Description:</label>
-      <input id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+      <div className="input-group">
+        <label htmlFor="description">Description:</label>
+        <input className="form-input" id="description" value={description} onChange={(e) => setDescription(e.target.value)} />
+      </div>
 
-      <label htmlFor="instructionOne">1. What would you like ChatGPT to know about you to provide better responses?</label>
-      <textarea id="instructionOne" value={instructionOne} onChange={(e) => setInstructionOne(e.target.value)} />
+      <div className="input-group">
+        <label htmlFor="instructionOne">1. What would you like ChatGPT to know about you to provide better responses?</label>
+        <textarea className="form-textarea" id="instructionOne" rows={5} value={instructionOne} onChange={(e) => setInstructionOne(e.target.value)} />
+      </div>
 
-      <label htmlFor="instructionTwo">2. How would you like ChatGPT to respond?</label>
-      <textarea id="instructionTwo" value={instructionTwo} onChange={(e) => setInstructionTwo(e.target.value)} />
+      <div className="input-group">
+        <label htmlFor="instructionTwo">2. How would you like ChatGPT to respond?</label>
+        <textarea className="form-textarea" id="instructionTwo" rows={5} value={instructionTwo} onChange={(e) => setInstructionTwo(e.target.value)} />
+      </div>
 
-      <button onClick={handleSave}>Save</button>
-      <button onClick={handleCancel}>Cancel</button>
+      <div className="button-group">
+        <button className="form-button save-button" onClick={handleSave}>Save</button>
+        <button className="form-button cancel-button" onClick={handleCancel}>Cancel</button>
+      </div>
     </div>
   );
 };
